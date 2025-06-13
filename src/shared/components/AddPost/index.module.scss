@@ -1,0 +1,37 @@
+@use '../../../styles/mixins/ff' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--color-bg);
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .titleInput {
+      padding: 10px 12px;
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      @include ff(400, 16px 20px);
+
+      &:focus {
+        border-color: var(--color-border-strong);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+      }
+
+      &::placeholder {
+        color: var(--color-text-muted);
+      }
+    }
+  }
+
+  .submitButton {
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,41 @@
+@use "../../../styles/mixins/ff" as *;
+
+.button {
+  border-radius: 34px;
+  display: flex;
+  gap: 8px;
+  transition: .3s;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  @include ff(600, 14px);
+
+
+  &.black {
+    background-color: var(--color-inverted-bg);
+    color: var(--color-inverted-text);
+
+    &:hover {
+      background-color: var(--color-accent-hover);
+    }
+  }
+
+  &.transparent {
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+
+    &:hover {
+      border-color: var(--color-border-strong);
+      background-color: var(--color-bg-secondary);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: var(--color-disabled);
+  }
+}

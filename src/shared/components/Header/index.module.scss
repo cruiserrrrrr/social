@@ -1,0 +1,16 @@
+@use "../../../styles/mixins/ff" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: var(--color-inverted-bg);
+  padding: 20px 0;
+
+  .link {
+    @include ff(600, 14px, normal);
+    color: var(--color-inverted-text);
+    text-decoration: none;
+  }
+}
