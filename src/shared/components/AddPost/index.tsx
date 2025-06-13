@@ -40,7 +40,7 @@ const AddPost = () => {
                 onClick={handleSubmit}
                 disabled={!title.trim() || !text.trim()}
             >
-                Add Post
+                Добавить
             </Button>
         </div>
     );
